@@ -3,26 +3,40 @@ include ../mixins/submenu.pug
 header.header
     .cotainer 
         .row.align-items-center
-            .col-3 
+            .col-2 
                 .inner.logo    
                     a(href='/')
-                        img(src='#', alt = 'Logo')
-            
-            .col-9
+                        img(src='#', alt='Logo')
+            .col-4
+                .search-bar
+                    form(action='/search', method='GET')
+                        input(type='text', name='query', placeholder='Tìm kiếm...')
+                        button(type='submit')
+                            i.fas.fa-search
+            .col-6
                 .inner-menu 
                     ul
                         li  
-                            a(href='/') Trang chủ
-                        li(class= 'sub-menu')
-                            a(href='/products') Trang sản phẩm
+                            a(href='/')
+                                i.fas.fa-home
+                                |  Trang chủ
+                        li(class='sub-menu')
+                            a(href='/products')
+                                i.fas.fa-box-open
+                                |  Trang sản phẩm
                             +sub-menu(productCategories)
                         li  
-                            a(href='/cart') Giỏ hàng(#{cart ?  cart.totalQuantity : '0'})
+                            a(href='/cart')
+                                i.fas.fa-shopping-cart
+                                |  Giỏ hàng (#{cart ? cart.totalQuantity : '0'})
                         if (user)
                             li  
-                                a(href='/user/logout') Đăng xuất
-                            li  
-                                a(href='/chat') Chat
+                                a(href='/user/logout')
+                                    i.fas.fa-sign-out-alt
+                                    |  Đăng xuất
                         else
                             li  
-                                a(href='/user/login') Đăng nhập/Đăng ký
+                                a(href='/user/login')
+                                    i.fas.fa-user
+                                    |  Đăng nhập/Đăng ký
+                

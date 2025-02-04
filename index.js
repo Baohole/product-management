@@ -6,13 +6,9 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 
 const http = require('http');
-const { Server } = require('socket.io');
-
 const app = express();
-
 const server = http.createServer(app);
-const io = new Server(server);
-global._io = io;
+
 require('dotenv').config();
 
 const port = process.env.PORT ;
@@ -47,5 +43,6 @@ aRouter(app);
 
 database.connect();
 server.listen(port, () => {
+  // console.log(aRouter);
   console.log(`Example app listening on port ${port}`);
 });

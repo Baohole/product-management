@@ -7,6 +7,7 @@ const authRouter = require('../../routers/admin/auth.router');
 
 const sysConfig = require('../../config/system');
 const auth = require('../../middleware/admin/auth.middleware');
+console.log(sysConfig);
 
 module.exports = (app) => {
     const PATH_ADMIN = sysConfig.prefixAdmin;
