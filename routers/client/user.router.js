@@ -16,7 +16,7 @@ router.get('/password/otp', controller.otp);
 router.post('/password/otp', controller.otpPost);
 
 router.get('/password/reset', controller.reset);
-router.post('/password/reset', controller.resetPost);
+router.post('/password/reset', userValidate.resetPassword, controller.resetPost);
 
 // router.get('/delete/:product_id', controller.delete);
 // router.post('/delete-all', controller.deleteAll);

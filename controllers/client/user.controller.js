@@ -6,6 +6,7 @@ const md5 = require('md5');
 const jwt = require('jsonwebtoken');
 
 const createOTP = require('../../helper/creatOTP.helper');
+const sendMail = require('../../helper/sendMail.helper');
 
 //[GET] /user/login
 module.exports.login = (req, res) => {
@@ -111,12 +112,18 @@ module.exports.forgotPost = async (req, res) => {
     const newOTP = new OTP(data);
     await newOTP.save();
 
+    const subject = 'Mã OTP xác minh mật khẩu';
+    const message = `
+            Mã OTP của bạn là: <b>${otp}</b>
+            Vui lòng không để lộ mã này.`;
+    sendMail(email, subject, message)
     res.redirect(`/user/password/otp?email=${email}`);
 }
 
 //[GET] /user/password/otp
 module.exports.otp = (req, res) => {
-    const email = req.query.email
+    const email = req.query.email;
+
     res.render('client/pages/user/otp', {
         pageTitle: 'Nhập mã OTP',
         email: email
