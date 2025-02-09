@@ -79,7 +79,7 @@ module.exports.index = async (req, res) => {
     metadata.totalClaim.progress = preTotalClaim === 0 ? 0 : (metadata.totalClaim.count / preTotalClaim).toFixed(4) * 100 - 100;
     metadata.totalOrder.progress = preTotalOrder === 0 ? 0 : (metadata.totalOrder.count / preTotalOrder).toFixed(4) * 100 - 100;
 
-    console.log(metadata);
+    // console.log(metadata);
     res.render('admin/pages/dashboard/index', {
         pageTitle: 'Trang tong quan',
         metadata,

@@ -1,23 +1,22 @@
 extends ../../layouts/default.pug
 
 block main
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css' rel='stylesheet')
+
     // Main Content
     main.flex-grow.p-6
         header.flex.justify-between.items-center.mb-6
             h2.text-2xl.font-semibold Overview
-            .flex.items-center.space-x-4
-                input.px-4.py-2.border.rounded-lg(type='text' placeholder='Search')
-                img.w-10.h-10.rounded-full(src='https://via.placeholder.com/40' alt='User')
         section.mb-6
             h3.text-lg.font-semibold.mb-2 Top Sales Representative
             .bg-white.shadow-md.rounded-lg.p-4
                 table.w-full.text-left
                     thead
                         tr.border-b
-                        th.py-2 Name
-                        th.py-2 Thumbnail
-                        th.py-2 Products
-                        th.py-2 Status
+                        th.py-2 Tên
+                        th.py-2 Ảnh
+                        th.py-2 Số lượng
+                        th.py-2 Trạng thái
                         th.py-2 Rank
                     tbody
                         each p in metadata.productSolds
@@ -35,16 +34,16 @@ block main
         
         section.grid.grid-cols-4.gap-6.mb-6
             .bg-white.shadow-md.rounded-lg.p-4
-                p.text-gray-500 Product Sold
+                p.text-gray-500 Tống số sản phẩm đã bán
                 h3.text-2xl.font-bold=metadata.totalOrder.count
                 p(class=`${metadata.totalOrder.progress >= 0 ? 'text-green-500' : 'text-red-500'}`)=`${metadata.totalOrder.progress}%`
             .bg-white.shadow-md.rounded-lg.p-4
-                p.text-gray-500 Total Profit
+                p.text-gray-500 Doanh thu
                 h3.text-2xl.font-bold=metadata.totalClaim.count
                 p(class=`${metadata.totalClaim.progress >= 0 ? 'text-green-500' : 'text-red-500'}`)=`${metadata.totalClaim.progress}%`
        
         section.bg-white.shadow-md.rounded-lg.p-4
-            h3.text-lg.font-semibold.mb-2 Claims Over the Years
+            h3.text-lg.font-semibold.mb-2 Biểu đồ doanh thu
             canvas#claimsChart.h-48.w-full(monthlyClaim=metadata.monthlyClaim)
 
     script(src="https://cdn.jsdelivr.net/npm/chart.js") 
