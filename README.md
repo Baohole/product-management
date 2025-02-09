@@ -30,7 +30,7 @@ The **Product Management Website** is a web application designed to facilitate s
 ### Setup Instructions
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/product-management.git
+   git clone https://github.com/Baohole/product-management.git
    cd product-management
    ```
 2. Install dependencies:
@@ -46,7 +46,7 @@ The **Product Management Website** is a web application designed to facilitate s
    ```
 
 ## Client & Admin Links
-- **Client Access:** [Client Dashboard](https://product-management-henna.vercel.app)
+- **Client Access:** [Client](https://product-management-henna.vercel.app)
 - **Admin Access:** [Admin Dashboard](https://product-management-henna.vercel.app/admin/dashboard)
 
 ## Test Accounts
@@ -61,5 +61,5 @@ The **Product Management Website** is a web application designed to facilitate s
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries, reach out to **hovietbao28102004@example.com**.
+For any queries, reach out to **hovietbao28102004@gmail.com**.
 
