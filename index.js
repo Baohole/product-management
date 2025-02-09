@@ -41,6 +41,14 @@ app.locals.moment = require('moment');
 cRouter(app);
 aRouter(app);
 
+app.get('*', function (req, res) {
+  res.status(404).render('error', {
+      title: '404 Page Not Found',
+      message: '404 Not Found'
+  })
+})
+
+
 database.connect();
 server.listen(port, () => {
   // console.log(aRouter);

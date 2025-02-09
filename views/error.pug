@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+    head
+        title= title
+        meta(charset='utf-8')
+    body
+        h1 Error
+        h2= message
+
+    //- Google Analytics
+    script.
+      window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+      }
+      ga.l = +new Date
+      ga('create', 'UA-3898076-18', 'auto')
+      ga('send', 'pageview')
+    script(async, src='//www.google-analytics.com/analytics.js')
+
+  
