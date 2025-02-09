@@ -6,19 +6,20 @@ The **Product Management Website** is a web application designed to facilitate s
 ## Features
 ### Client Features
 - View available products.
-- Filter and search products based on categories and price.
+- Filter and search products based on categories.
 - Add products to the cart.
-- Place and track orders.
-- Update profile details.
+- Reset Password
 
 ### Admin Features
 - Manage product listings (add, edit, delete products).
 - View and process orders.
 - Manage user accounts (activate/deactivate users).
+- Filter and search products.
 - View sales analytics and reports.
+- Manage roles
 
 ## Tech Stack
-- **Frontend:** ReactJS
+- **Frontend:** HTML, CSS
 - **Backend:** Node.js with Express
 - **Database:** MongoDB
 - **Authentication:** JWT-based authentication
@@ -39,30 +40,26 @@ The **Product Management Website** is a web application designed to facilitate s
 3. Configure environment variables:
    - Create a `.env` file in the root directory.
    - Add database and authentication configurations.
-4. Start the backend server:
-   ```sh
-   npm run server
-   ```
-5. Start the frontend:
+4. Start 
    ```sh
    npm start
    ```
 
 ## Client & Admin Links
-- **Client Access:** [Client Dashboard](https://yourwebsite.com/client)
-- **Admin Access:** [Admin Dashboard](https://yourwebsite.com/admin)
+- **Client Access:** [Client Dashboard](https://product-management-henna.vercel.app)
+- **Admin Access:** [Admin Dashboard](https://product-management-henna.vercel.app/admin/dashboard)
 
 ## Test Accounts
 - **Client Account:**
-  - Email: client@example.com
-  - Password: client123
+  - Email: timipib199@intady.com
+  - Password: 123456
 - **Admin Account:**
-  - Email: admin@example.com
-  - Password: admin123
+  - Email: levana@gmail.com
+  - Password: 123456
 
 ## License
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries, reach out to **your-email@example.com**.
+For any queries, reach out to **hovietbao28102004@example.com**.
 

@@ -10,7 +10,7 @@ header.header
             .col-4
                 .search-bar
                     form(action='/search', method='GET')
-                        input(type='text', name='query', placeholder='Tìm kiếm...')
+                        input(type='text', name='search_query', placeholder='Tìm kiếm...' value=search_query)
                         button(type='submit')
                             i.fas.fa-search
             .col-6
